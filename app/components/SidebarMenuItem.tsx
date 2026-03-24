@@ -15,12 +15,13 @@ interface Props {
 
 export const SidebarMenuItem = ({path, icon, title, subTitle}: Props) => {
     
-    const pathNAme = usePathname();
+    const currentPath = usePathname();
 
     return (
         
         <Link href={path} 
-              className="w-full px-2 inline-flex space-x-4 items-center border-2 py-3">
+            className={`w-full px-2 inline-flex space-x-4 items-center border-2 py-3 *
+                        ${ currentPath === path ? 'bg-amber-400' : ''} `}>
             <div>
                 <span className="rounded-full w-8 h-8">{icon}</span>
             </div>
