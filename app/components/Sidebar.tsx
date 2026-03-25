@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { IoBrowsersOutline, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoFootball, IoLogoReact } from "react-icons/io5";
 import { SidebarMenuItem } from './SidebarMenuItem';
 import { FaHome } from 'react-icons/fa';
 import { PiArrowCounterClockwiseDuotone } from 'react-icons/pi';
@@ -16,6 +16,12 @@ const menuItems = [
         icon: <PiArrowCounterClockwiseDuotone size={40}/>,
         title: 'Counter',
         subTitle: 'Contador Client Side'
+    },
+    {
+        path: '/dashboard/pokemons',
+        icon: <IoFootball size={40}/>,
+        title: 'Pokemons',
+        subTitle: 'Generación estática'
     }
 ]
 
@@ -23,7 +29,7 @@ export const Sidebar = () => {
     return (
         <div id="menu" 
         style={{width: '400px'}}
-        className="bg-green-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen overflow-y-scroll">
+        className="bg-green-900 min-h-screen z-10 text-slate-300 w-64 left-0 overflow-y-scroll">
             
             <div id="logo" className="my-4 px-6">
                 <h1 className="flex text-lg md:text-2xl font-bold text-white">
